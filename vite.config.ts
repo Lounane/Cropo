@@ -14,17 +14,4 @@ export default defineConfig({
       },
     }),
   ],
-  resolve: {
-    extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json", ".svg"],
-    // alias: {
-    //   "@": path.resolve("./src"),
-    //   "@imgs": path.resolve("./src/assets/images"),
-    //   "@components": path.resolve("./src/components"),
-    //   "@atoms": path.resolve("./src/components/atoms"),
-    //   // "@": path.resolve(__dirname, "./src"),
-    //   // "@imgs": path.resolve(__dirname, "./src/assets/images"),
-    //   // "@components": path.resolve(__dirname, "./src/components"),
-    //   // "@atoms": path.resolve(__dirname, "./src/components/atoms"),
-    // },
-  },
 });

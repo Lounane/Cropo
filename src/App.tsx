@@ -1,5 +1,4 @@
 import { useState } from "react";
-import tw, { styled } from "twin.macro";
 import { Nav_Bar } from "./components";
 
 function App() {
