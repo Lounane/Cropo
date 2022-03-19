@@ -1,41 +1,37 @@
 {
-  "name": "Cropo",
-  "private": true,
-  "version": "0.0.0",
   "babelMacros": {
     "twin": {
-      "preset": "styled-components"
+      "preset": "emotion"
     }
   },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@types/ramda": "^0.28.1",
-    "framer-motion": "^6.2.8",
-    "path": "^0.12.7",
-    "ramda": "^0.28.0",
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.8.2",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.3.3"
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@emotion/babel-plugin": "^11.7.2",
     "@types/node": "^17.0.21",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
-    "@types/styled-components": "^5.1.24",
-    "@vitejs/plugin-react": "^1.0.7",
-    "autoprefixer": "^10.4.2",
+    "@types/react": "^17.0.40",
+    "babel-loader": "^8.2.3",
     "babel-plugin-macros": "^3.1.0",
-    "babel-plugin-styled-components": "^2.0.6",
-    "postcss": "^8.4.8",
+    "prettier": "^2.6.0",
     "tailwindcss": "^3.0.23",
     "twin.macro": "^2.8.2",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0",
-    "vite-plugin-svgr-component": "^1.0.0",
-    "vite-tsconfig-paths": "^3.4.1"
-  }
+    "typescript": "^4.6.2"
+  },
+  "version": "0.0.0"
 }

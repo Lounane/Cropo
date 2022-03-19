@@ -37,5 +37,9 @@ ENV HOME /home/node
 RUN fish
 RUN echo "starship init fish | source" >> ~/.config/fish/config.fish
 
+# Npm Check Updates
+RUN npm install -g npm-check-updates
+
+
 
 
