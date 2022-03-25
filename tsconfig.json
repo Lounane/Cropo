@@ -19,6 +19,7 @@
       "@/*": ["./*"],
       "@imgs/*": ["./assets/images/*"],
       "@styles/*": ["./styles/*"],
+      "@helpers": ["./helpers"],
       "@components/*": ["./components/*"],
       "@atoms": ["./components/atoms"],
       "@molecules": ["./components/molecules"],
