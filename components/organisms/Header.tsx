@@ -7,7 +7,6 @@ const Header_Container = tw.header`min-h-[70vh] w-full px-[5vw] py-[2vh] flex fl
 const Header = () => (
   <Header_Container>
     <Nav_Bar />
-
     {/* <Steps /> */}
     <Image_Input />
   </Header_Container>

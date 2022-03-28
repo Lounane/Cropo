@@ -24,7 +24,8 @@
       "@atoms": ["./components/atoms"],
       "@molecules": ["./components/molecules"],
       "@organisms": ["./components/organisms"],
-      "@layouts": ["./components/layouts"]
+      "@layouts": ["./components/layouts"],
+      "@logic": ["./logic"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

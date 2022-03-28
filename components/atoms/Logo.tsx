@@ -1,5 +1,5 @@
 import 'twin.macro'
-import tw, { styled } from 'twin.macro'
+import tw from 'twin.macro'
 import { FiCrop } from 'react-icons/fi'
 
 const Logo_Link = tw.a`flex content-center items-center gap-2 text-xl font-bold tracking-wider   mr-auto`
