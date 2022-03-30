@@ -1,9 +1,10 @@
 import 'twin.macro'
 import tw from 'twin.macro'
 import { FiCrop } from 'react-icons/fi'
+import { Logo_Icon } from '@icons'
 
 const Logo_Link = tw.a`flex content-center items-center gap-2 text-xl font-bold tracking-wider   mr-auto`
-const Logo_Icon = tw(FiCrop)`text-purple-500 w-8 h-full `
+// const Logo_Icon = tw(FiCrop)`text-purple-500 w-8 h-full `
 const Logo_Text = tw.span`hidden xsm:block`
 const Logo = () => (
   <Logo_Link href="/">

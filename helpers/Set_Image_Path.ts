@@ -6,7 +6,6 @@ function Set_Image_Path(
   const reader = new FileReader()
   reader.readAsDataURL(image)
   reader.onloadend = () => {
-    console.log(reader.result)
     setImageSrc(String(reader.result))
   }
 }

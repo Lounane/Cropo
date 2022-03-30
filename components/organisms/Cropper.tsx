@@ -7,7 +7,7 @@ const Image_input = () => {
   if (imageSrc) {
     return (
       <>
-        <Cropper_Editor src={imageSrc} />
+        <Cropper_Editor src={imageSrc} width_Val={100} />
         <Cropper_Settings />
       </>
     )

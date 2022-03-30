@@ -1,12 +1,53 @@
-import { useState } from 'react'
+import { ChangeEvent, ReactEventHandler, SyntheticEvent, useState } from 'react'
 import 'react-image-crop/dist/ReactCrop.css'
-import ReactCrop, { Crop } from 'react-image-crop'
+import ReactCrop, { centerCrop, Crop, makeAspectCrop } from 'react-image-crop'
+import tw from 'twin.macro'
+type Cropper_Values_Types = {
+  src: string
+  width_Val?: number
+  height_Val?: number
+  aspect_Val?: number
+}
+export default function Cropper_Editor({
+  src,
+  width_Val = 100,
+  aspect_Val,
+}: Cropper_Values_Types) {
+  const [crop, setCrop] = useState<Crop>()
 
-export default function Cropper_Editor({ src }: { src: string }) {
-  const [crop, setCrop] = useState<Crop>(initial_Crop)
+  function onImageLoad(e: SyntheticEvent<HTMLImageElement, Event>) {
+    const { width, height } = e.currentTarget
+
+    const crop = centerCrop(
+      makeAspectCrop(
+        {
+          // You don't need to pass a complete crop into
+          // makeAspectCrop or centerCrop.
+          unit: '%',
+          width: width_Val,
+          height: width_Val,
+        },
+        //@ts-ignore
+        aspect_Val,
+        width,
+        height,
+      ),
+      width,
+      height,
+    )
+
+    setCrop(crop)
+  }
+
+  const Image = tw.img`rounded-xl`
   return (
-    <ReactCrop crop={crop} onChange={c => setCrop(c)} aspect={1} ruleOfThirds>
-      <img src={src} />
+    <ReactCrop
+      crop={crop}
+      onChange={(crop, percentCrop) => setCrop(percentCrop)}
+      aspect={aspect_Val}
+      ruleOfThirds
+    >
+      <Image src={src} onLoad={onImageLoad} />
     </ReactCrop>
   )
 }

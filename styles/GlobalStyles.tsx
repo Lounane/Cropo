@@ -7,6 +7,12 @@ const customStyles = css({
     WebkitTapHighlightColor: theme`colors.purple.500`,
     ...tw`antialiased`,
   },
+  // 'input[type = number]::-webkit-inner-spin-button ',
+  'input[type = number]::-webkit-inner-spin-button': {
+    appearance: 'none',
+    MozAppearance: 'textfield',
+    margin: 0,
+  },
 }) as Interpolation<Theme>
 
 // const Global_Styles = tw.div`text-gray-300 bg-gradient-to-tl from-gray-900 to-gray-800 `

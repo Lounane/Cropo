@@ -1,4 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
+
 
 module.exports = {
   theme: {
@@ -59,5 +61,27 @@ module.exports = {
 
     },
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/forms'),
+    plugin(function ({ addUtilities, addComponents, e, prefix, config }) {
+      // Add your custom styles here
+      addUtilities({
+        // '.apnone': {
+        //   'input[type = number]::-webkit-inner-spin-button',
+        //   'input[type = number]::- webkit - outer - spin - button'{
+        //     '-webkit-appearance': none,
+        //     margin: 110
+        //   }
+        // }
+
+      })
+    }),
+
+
+
+  ],
 }
+// input[type = number]:: -webkit - inner - spin - button,
+//   input[type = number]:: -webkit - outer - spin - button {
+//   opacity: 1;
+// }
