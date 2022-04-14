@@ -16,16 +16,30 @@
   "settings": {},
 
   // Add the IDs of extensions you want installed when the container is created.
-  "extensions": ["dbaeumer.vscode-eslint","patbenatar.advanced-new-file","steoates.autoimport","streetsidesoftware.code-spell-checker","RedVanWorkshop.explorer-exclude-vscode-extension","mkxml.vscode-filesize","eamodio.gitlens","wix.vscode-import-cost","christian-kohler.path-intellisense","esbenp.prettier-vscode","siegebell.prettify-symbols-mode","bradlc.vscode-tailwindcss","lightyen.tailwindcss-intellisense-twin"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "patbenatar.advanced-new-file",
+    "steoates.autoimport",
+    "streetsidesoftware.code-spell-checker",
+    "RedVanWorkshop.explorer-exclude-vscode-extension",
+    "mkxml.vscode-filesize",
+    "eamodio.gitlens",
+    "wix.vscode-import-cost",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "lightyen.tailwindcss-intellisense-twin",
+    "wallabyjs.quokka-vscode"
+  ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
+  "forwardPorts": [3000],
 
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "yarn install",
 
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  // "remoteUser": "node",
+  "remoteUser": "node",
   // "runArgs": ["--userns=keep-id"],
   "runArgs": ["--name=code"]
   // "containerUser": "node"

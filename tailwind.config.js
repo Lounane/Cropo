@@ -16,6 +16,9 @@ module.exports = {
       screens: {
         xsm: "350px"
       },
+      dropShadow: {
+        '3xl': '0 0 4px',
+      },
       // Keyframes: {
       //   signal: {
       //     '0%, 100%': { 'stroke-dashoffset': '100' },
