@@ -26,7 +26,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 RUN curl -s https://api.github.com/repos/starship/starship/releases/latest \
     | grep browser_download_url \
-    | grep x86_64-unknown-linux-gnu \
+    # | grep x86_64-unknown-linux-gnu \
+    | grep aarch64-unknown-linux-musl\
     | cut -d '"' -f 4 \
     | wget -qi -
 RUN tar xvf starship-*.tar.gz
