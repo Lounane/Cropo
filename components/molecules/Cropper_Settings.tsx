@@ -1,5 +1,5 @@
 import tw from 'twin.macro'
-import { Card } from '@atoms'
+import { Card, Input } from '@atoms'
 import { FiBarChart2, FiCircle, FiSquare } from 'react-icons/fi'
 import { ChangeEvent, Dispatch, SetStateAction } from 'react'
 import { Link_Icon } from '@icons'
@@ -20,8 +20,14 @@ const Label_Number = tw.label`
 grid grid-template["input unit" /3fr 1fr] 
 cursor-pointer text-left py-8
 `
-const Input_Number = tw.input`bg-gray-900 shadow-xl text-left p-3 w-full rounded-l-xl outline-none
-grid-area[input] transition duration-300
+// const Input_Number = tw.input`bg-gray-900 shadow-xl text-left p-3 w-full rounded-l-xl outline-none
+// grid-area[input] transition duration-300
+// hocus:bg-gray-700
+// hocus:[& + span]:text-purple-500
+// `
+const Input_Number = tw(Input)`
+rounded-r-none
+grid-area[input] 
 hocus:bg-gray-700
 hocus:[& + span]:text-purple-500
 `
@@ -146,8 +152,6 @@ const Cropper_Settings = ({
             name={INPUT_NAME.width}
             onChange={on_Change_Handler}
             value={cropState.width}
-            // onChange={ev => setWidth(+ev.target.value)}
-            step="1"
           />
           <Input_Unit>px</Input_Unit>
         </Label_Number>
@@ -160,8 +164,6 @@ const Cropper_Settings = ({
             name={INPUT_NAME.height}
             onChange={on_Change_Handler}
             value={cropState.height}
-            // onChange={ev => setHeight(+ev.target.value)}
-            step="1"
           />
           <Input_Unit>px</Input_Unit>
         </Label_Number>

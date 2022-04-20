@@ -1,3 +1,4 @@
+// import Test from '@/components/organisms/Test'
 import { Cropper, Header } from '@organisms'
 import tw from 'twin.macro'
 
@@ -7,6 +8,7 @@ const App = () => (
   <Container>
     <Header />
     <Cropper />
+    {/* <Test /> */}
   </Container>
 )
 

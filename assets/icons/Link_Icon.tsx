@@ -1,14 +1,14 @@
 import tw, { styled } from 'twin.macro'
 
-function Link_icon({ link = false }) {
+function Link_icon({ link = false, size = '44' }) {
   const Svg = styled.svg(({ link }: { link: boolean }) => [
     tw`[& #unlink]:transition duration-300 opacity-100 `,
     link && tw`[& #unlink]:opacity-0`,
   ])
   return (
     <Svg
-      width="44"
-      height="44"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"

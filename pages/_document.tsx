@@ -1,4 +1,4 @@
-import React from 'react'
+import { Fragment } from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { extractCritical } from '@emotion/server'
 
@@ -7,15 +7,15 @@ export default class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx)
     const critical = extractCritical(initialProps.html)
     initialProps.html = critical.html
-    initialProps.styles = (
-      <React.Fragment>
+    initialProps.styles = [
+      <Fragment key={1}>
         {initialProps.styles}
         <style
           data-emotion-css={critical.ids.join(' ')}
           dangerouslySetInnerHTML={{ __html: critical.css }}
         />
-      </React.Fragment>
-    )
+      </Fragment>,
+    ]
 
     return initialProps
   }

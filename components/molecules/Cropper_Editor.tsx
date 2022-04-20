@@ -6,6 +6,7 @@ import ReactCrop, {
   makeAspectCrop,
 } from 'react-image-crop'
 import { ACTION, Action, Crop } from '../organisms/Cropper'
+import { thunkify } from 'ramda'
 type Cropper_Values_Types = {
   src: string
   Width: number
@@ -86,7 +87,10 @@ export default function Cropper_Editor({
   // }, [imgWidth, imgHeight])
   useEffect(() => {
     setCrop(cropMaker)
-  }, [width, height, imgHeight, imgWidth, x, y])
+  }, [width, height, x, y])
+  useEffect(() => {
+    setCrop(centerCrop(cropMaker, imgWidth, imgHeight))
+  }, [imgWidth, imgHeight])
   // useEffect(() => {
   //   if (crop.height !== height || crop.width !== width) {
   //     const { width, height } = crop
@@ -96,17 +100,7 @@ export default function Cropper_Editor({
   //     console.log(crop)
   //   }
   // }, [crop.height, crop.width])
-  function fixit() {
-    // cropDispatcher({
-    //   type: ACTION.setRatio,
-    //   value: ratio,
-    // })
-    console.log('hhhhh')
-  }
 
-  function fixRatio(ratio: number) {
-    return fixit
-  }
   return (
     <ReactCrop
       crop={crop}
@@ -115,7 +109,6 @@ export default function Cropper_Editor({
       }}
       onComplete={(crop, percentCrop) => {
         const { width, height, x, y } = crop
-        // document.removeEventListener('keydown', fixit)
 
         cropDispatcher({
           type: ACTION.setRatio,
@@ -126,17 +119,10 @@ export default function Cropper_Editor({
         cropDispatcher({ type: ACTION.setPosition, x, y })
         console.log(crop)
       }}
-      onDragStart={ev => {
-        const initRatio = cropState.ratio || 1
-        console.log(ev)
-        // const target = ev.target as HTMLDivElement
-        // const cropFrame = target.offsetParent
-        // document.addEventListener('keydown', fixRatio(initRatio))
-        // const { x: newX, y: newY } = ev
+      onDragStart={function (ev) {
         const keepRatio = ev.shiftKey
         if (!keepRatio) {
           cropDispatcher({ type: ACTION.setRatio, value: undefined })
-          // cropDispatcher({ type: ACTION.lockRatio })
         }
       }}
       aspect={ratio}

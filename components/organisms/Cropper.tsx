@@ -73,7 +73,7 @@ function setPosition(state: Crop, action: Action_Set_Position): Crop {
 }
 
 function setWidth(state: Crop, action: Action_Set_Width_Height): Crop {
-  const width = +action.value.toFixed()
+  const width = Math.round(action.value)
   const ratio = width / state.height
   const height = state.ratio ? +(width / state.ratio).toFixed() : state.height
   return state.isLockedRatio
@@ -82,7 +82,7 @@ function setWidth(state: Crop, action: Action_Set_Width_Height): Crop {
 }
 
 function setHeight(state: Crop, action: Action_Set_Width_Height): Crop {
-  const height = +action.value.toFixed()
+  const height = Math.round(action.value)
   const width = state.ratio ? +(height * state.ratio).toFixed() : state.width
   const ratio = state.width / height
   return state.isLockedRatio
@@ -124,13 +124,13 @@ const cropReducer = (state: Crop, action: Action): Crop => {
 const Cropper = () => {
   const [cropState, cropDispatcher] = useReducer(cropReducer, cropInit)
 
-  const { imageSrc, set_Image_Handler } = Cropper_Logic()
+  const { imgSrc, setImgHandler } = Cropper_Logic()
   console.log('Cropper')
-  if (imageSrc) {
+  if (imgSrc) {
     return (
       <>
         <Cropper_Editor
-          src={imageSrc}
+          src={imgSrc}
           cropState={cropState}
           cropDispatcher={cropDispatcher}
         />
@@ -141,7 +141,7 @@ const Cropper = () => {
       </>
     )
   } else {
-    return <Image_Input set_Image={set_Image_Handler} />
+    return <Image_Input set_Image={setImgHandler} />
   }
 }
 

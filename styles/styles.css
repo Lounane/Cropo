@@ -1,0 +1,19 @@
+.transf-enter,
+.transf-appear 
+{
+/* transform: scale(.3); */
+  opacity: 0.01;
+}
+/* .transf-enter-active, */
+.transf-appear-active {
+  opacity: .5;
+    transition: all 10000ms ease-out;
+
+}
+.transf-exit {
+  opacity: 1;
+}
+.transf-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
