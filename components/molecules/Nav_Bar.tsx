@@ -14,7 +14,7 @@ const Nav_Bar = () => {
     <Nav_Container>
       <Logo />
       {/* <Flex_Container> */}
-      <Link>Login</Link>
+      <Link opacity-10>Login</Link>
       <Link Btn>Try for free</Link>
       {/* </Flex_Container> */}
     </Nav_Container>

@@ -1,6 +1,6 @@
 import tw, { css, styled } from 'twin.macro'
 import { FiImage } from 'react-icons/fi'
-import { Link, Card, Input } from '@atoms'
+import { Btn, Link, Label, Card, Input } from '@atoms'
 import {
   ChangeEvent,
   ChangeEventHandler,
