@@ -24,20 +24,24 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)" --yes
 
-RUN curl -s https://api.github.com/repos/starship/starship/releases/latest \
-    | grep browser_download_url \
-    # | grep x86_64-unknown-linux-gnu \
-    | grep aarch64-unknown-linux-musl\
-    | cut -d '"' -f 4 \
-    | wget -qi -
-RUN tar xvf starship-*.tar.gz
-RUN ls -la
-RUN mv starship /usr/local/bin/
-USER node
+# RUN curl -s https://api.github.com/repos/starship/starship/releases/latest \
+#     | grep browser_download_url \
+#     # | grep x86_64-unknown-linux-gnu \
+#     | grep aarch64-unknown-linux-musl\
+#     | cut -d '"' -f 4 \
+#     | wget -qi -
+# RUN tar xvf starship-*.tar.gz
+# RUN ls -la
+# RUN mv starship /usr/local/bin/
+
+# RUN curl -sS https://starship.rs/install.sh | sh  --yes
+RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y -f
+
 ENV HOME /home/node
 RUN fish
 RUN echo "starship init fish | source" >> ~/.config/fish/config.fish
-
+RUN echo "set fish_greeting" >> ~/.config/fish/config.fish
+USER node
 # Npm Check Updates
 RUN npm install -g npm-check-updates
 

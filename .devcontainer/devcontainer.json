@@ -29,7 +29,8 @@
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
     "lightyen.tailwindcss-intellisense-twin",
-    "wallabyjs.quokka-vscode"
+    "wallabyjs.quokka-vscode",
+    "mutantdino.resourcemonitor"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
