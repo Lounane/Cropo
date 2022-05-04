@@ -20,7 +20,10 @@ RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3
 RUN curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_11/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends fish
+    && apt-get -y install --no-install-recommends fish 
+RUN apt-get update && apt-get install gnupg2 -y
+
+
 
 # RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)" --yes
 
@@ -42,6 +45,7 @@ RUN fish
 RUN echo "starship init fish | source" >> ~/.config/fish/config.fish
 RUN echo "set fish_greeting" >> ~/.config/fish/config.fish
 USER node
+# RUN corepack enable
 # Npm Check Updates
 RUN npm install -g npm-check-updates
 
