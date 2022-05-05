@@ -10,9 +10,5 @@ if (vitest) {
       expect(true).toBe(true);
       expect(1).toEqual(1);
     });
-    it("yup work", () => {
-      expect(true).toBe(true);
-      expect(1).toEqual(1);
-    });
   });
 }
