@@ -31,7 +31,15 @@
     "lightyen.tailwindcss-intellisense-twin",
     "wallabyjs.quokka-vscode",
     "mutantdino.resourcemonitor",
-    "snyk-security.snyk-vulnerability-scanner"
+    "snyk-security.snyk-vulnerability-scanner",
+    "ZixuanChen.vitest-explorer",
+    "metaseed.metago",
+    "pascalsenn.keyboard-quickfix",
+
+    "yzhang.markdown-all-in-one",
+    "bierner.markdown-mermaid",
+    "mdickin.markdown-shortcuts",
+    "DavidAnson.vscode-markdownlint"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
