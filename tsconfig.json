@@ -15,8 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
 
-    // "types": ["vitest/importMeta"]
-    "types": ["vitest/globals"]
+    "types": ["vitest/importMeta"]
+    // "types": ["vitest/globals"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

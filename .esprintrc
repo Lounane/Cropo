@@ -1,0 +1,9 @@
+{
+  "paths": [
+    "components/**/*.tsx"
+  ],
+  "ignored": [
+    "**/node_modules/**/*"
+  ],
+  "port": 5004
+}

@@ -1,0 +1,132 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@next/next/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:switch-case/recommended",
+
+    "perf-standard",
+
+    "plugin:boundaries/strict",
+    "plugin:prettier/recommended",
+
+    "plugin:ramda/recommended",
+    "plugin:promise/recommended",
+    "plugin:functional/external-recommended",
+    "plugin:functional/all",
+
+    //Security
+    "plugin:pii/recommended",
+    "plugin:jsonc/base",
+    "plugin:no-unsanitized/DOM",
+    "plugin:security/recommended",
+    //Next
+    "prettier"
+  ],
+
+  "plugins": [
+    "filename-consistency",
+    "simple-import-sort",
+    "testing-library",
+    "switch-case",
+    "promise",
+    "ramda",
+    "functional",
+    "boundaries",
+    "no-secrets",
+    "pii",
+    "xss",
+    "only-error"
+  ],
+
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+
+  "settings": {
+    "boundaries/elements": [
+      {
+        "type": "atoms",
+        "pattern": "atoms/*"
+      },
+      {
+        "type": "molecules",
+        "pattern": "molecules/*"
+      },
+      {
+        "type": "organisms",
+        "pattern": "organisms/*"
+      },
+      {
+        "type": "helpers",
+        "pattern": "helpers/*"
+      },
+      {
+        "type": "hooks",
+        "pattern": "hooks/*"
+      },
+      {
+        "type": "pages",
+        "pattern": "pages/*"
+      },
+      {
+        "type": "services",
+        "pattern": "services/*"
+      },
+      {
+        "type": "types",
+        "pattern": "types/*"
+      }
+    ]
+  },
+  "rules": {
+    "filename-consistency/match": ["error", "snake"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["snake_case"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["camelCase"],
+        "prefix": ["is", "should", "has", "can", "did", "will"]
+      },
+      {
+        "selector": ["function"],
+        "format": ["PascalCase"]
+      }
+    ],
+    "boundaries/element-types": [
+      2,
+      {
+        "default": "disallow",
+        "rules": [
+          {
+            "from": "molecules",
+            "allow": ["atoms"]
+          },
+          {
+            "from": "organisms",
+            "allow": ["molecules", "atoms", "helpers", "hooks"]
+          },
+          {
+            "from": "pages",
+            "allow": ["organisms", "services"]
+          }
+        ]
+      }
+    ]
+  }
+}

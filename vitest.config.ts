@@ -8,7 +8,8 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "happy-dom",
-    globals: true,
+    // environment: "jsdom",
+    // globals: true,
 
     includeSource: ["components/**/*.{ts,tsx}"],
   },

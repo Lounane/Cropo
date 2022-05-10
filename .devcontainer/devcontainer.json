@@ -1,4 +1,3 @@
-
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.224.2/containers/typescript-node
 {
@@ -31,7 +30,8 @@
     "bradlc.vscode-tailwindcss",
     "lightyen.tailwindcss-intellisense-twin",
     "wallabyjs.quokka-vscode",
-    "mutantdino.resourcemonitor"
+    "mutantdino.resourcemonitor",
+    "snyk-security.snyk-vulnerability-scanner"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
