@@ -13,7 +13,7 @@
     "perf-standard",
 
     "plugin:boundaries/strict",
-    "plugin:prettier/recommended",
+    // "plugin:prettier/recommended",
 
     "plugin:ramda/recommended",
     "plugin:promise/recommended",
@@ -41,7 +41,7 @@
     "no-secrets",
     "pii",
     "xss",
-    "only-error"
+    "only-warn"
   ],
 
   "parser": "@typescript-eslint/parser",

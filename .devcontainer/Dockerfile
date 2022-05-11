@@ -16,12 +16,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 # RUN su node -c "npm install -g <your-package-list -here>"
 
 # Fish
-RUN echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_11/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
-RUN curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_11/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends fish 
-RUN apt-get update && apt-get install gnupg2 -y
+    && apt-get -y install --no-install-recommends fish watchman gnupg2 
 
 RUN sh -c "$(curl -fsSL https://starship.rs/install.sh)" -y -f
 

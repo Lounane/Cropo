@@ -1739,6 +1739,11 @@ eslint-plugin-only-error@^1.0.2:
   resolved "https://registry.yarnpkg.com/eslint-plugin-only-error/-/eslint-plugin-only-error-1.0.2.tgz#3e802e5455879e6f42a0ca8730521ec554f9bb42"
   integrity sha512-tdz/EU/LeQLPNMBIQOSl39by+/NGKdhjfba6qDvMWjcbY0GmiMk0bXrIXRGAwW9fksH30Y+KKlK1Jc32bbql9w==
 
+eslint-plugin-only-warn@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-only-warn/-/eslint-plugin-only-warn-1.0.3.tgz#a75f3a9ded7f03e9808e75ec27f22b644084506e"
+  integrity sha512-XQOX/TfLoLw6h8ky51d29uUjXRTQHqBGXPylDEmy5fe/w7LIOnp8MA24b1OSMEn9BQoKow1q3g1kLe5/9uBTvw==
+
 eslint-plugin-perf-standard@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-perf-standard/-/eslint-plugin-perf-standard-1.0.3.tgz#f2477073b40f7ae8c42093b9a08d84835d146b69"

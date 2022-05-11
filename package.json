@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "nibble": "eslint-nibble ./",
+    "nibble": "eslint-nibble ./components/**/*",
     "lint": "next lint",
     "test": "vitest"
   },
@@ -35,6 +35,7 @@
     "eslint-plugin-no-secrets": "^0.8.9",
     "eslint-plugin-no-unsanitized": "^4.0.1",
     "eslint-plugin-only-error": "^1.0.2",
+    "eslint-plugin-only-warn": "^1.0.3",
     "eslint-plugin-perf-standard": "^1.0.3",
     "eslint-plugin-pii": "^1.0.2",
     "eslint-plugin-prettier": "^4.0.0",
