@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": [
     "next/core-web-vitals",
     "plugin:@next/next/recommended",
@@ -12,7 +13,7 @@
 
     "perf-standard",
 
-    "plugin:boundaries/strict",
+    "plugin:boundaries/recommended",
     // "plugin:prettier/recommended",
 
     "plugin:ramda/recommended",
@@ -41,7 +42,8 @@
     "no-secrets",
     "pii",
     "xss",
-    "only-warn"
+    "only-error"
+    // "only-warn"
   ],
 
   "parser": "@typescript-eslint/parser",
@@ -82,8 +84,17 @@
       {
         "type": "types",
         "pattern": "types/*"
+      },
+      {
+        "type": "utils",
+        "pattern": "utils/*"
       }
     ]
+    // "import/resolver": {
+    //   "typescript": {
+    //     "alwaysTryTypes": true
+    //   }
+    // }
   },
   "rules": {
     "filename-consistency/match": ["error", "snake"],
@@ -127,6 +138,22 @@
           }
         ]
       }
-    ]
+    ],
+    "boundaries/external": [
+      2,
+      {
+        // disallow all external imports by default
+        "default": "disallow"
+        // "rules": [
+        //   {
+        //     // from helper elements
+        //     "from": ["utils"],
+        //     // allow importing moment
+        //     "allow": ["*"]
+        //   }
+        // ]
+      }
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }

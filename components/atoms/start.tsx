@@ -1,10 +1,11 @@
-// import { describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
+// import { screen, render } from "@testing-library/react";
+import { render, screen } from "../../utils/test_utils";
 
-export default function TestComponent() {
-  return <button>Hello World</button>;
-}
+// export default function TestComponent() {
+//   return <button type="button">Hello World</button>;
+// }
 
+/* eslint-disable */
 if (import.meta.vitest) {
   const { describe, it, expect } = import.meta.vitest;
   describe("test", () => {
@@ -14,9 +15,8 @@ if (import.meta.vitest) {
       element.click();
       expect(element).toBeTruthy();
       expect(element).toBeDefined();
-
-      const a: string = 5;
-      expect(a).toBe(5);
     });
   });
 }
+
+/* eslint-disable */
