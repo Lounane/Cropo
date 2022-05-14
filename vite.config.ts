@@ -4,13 +4,15 @@ import legacy from "@vitejs/plugin-legacy";
 import tsconfigPaths from "vite-tsconfig-paths";
 import mkcert from "vite-plugin-mkcert";
 import Unocss from "unocss/vite";
-import { presetUno } from "unocss";
+// import { presetUno } from "unocss";
 import presetAttributify from "@unocss/preset-attributify";
+import presetUno from "@unocss/preset-uno";
 
 import UnocssIcons from "@unocss/preset-icons";
 
 const defineConfig: UserConfigFn = ({ command, mode }) => {
   const config: UserConfig = {
+    root: "pages",
     server: {
       https: true,
     },
@@ -18,8 +20,8 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
       Unocss({
         /* options */
         presets: [
-          presetAttributify({}),
           presetUno(),
+          presetAttributify(),
 
           UnocssIcons({
             // options
