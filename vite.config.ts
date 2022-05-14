@@ -21,7 +21,7 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
     test: {
       environment: "happy-dom",
       // environment: "jsdom",
-      // globals: true,
+      globals: true,
       includeSource: ["components/**/*.{ts,tsx}"],
     },
     plugins: [

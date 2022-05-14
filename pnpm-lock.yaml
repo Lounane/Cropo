@@ -4,7 +4,9 @@ specifiers:
   '@0x219/commitlint-config': 1.0.2
   '@commitlint/cli': 16.2.4
   '@iconify-json/carbon': ^1.1.4
+  '@testing-library/dom': ^8.13.0
   '@testing-library/react': ^13.2.0
+  '@testing-library/user-event': ^14.2.0
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.3
   '@typescript-eslint/eslint-plugin': 5.23.0
@@ -44,7 +46,9 @@ devDependencies:
   '@0x219/commitlint-config': 1.0.2
   '@commitlint/cli': 16.2.4
   '@iconify-json/carbon': 1.1.4
+  '@testing-library/dom': 8.13.0
   '@testing-library/react': 13.2.0_ef5jwxihqo6n7gxfmzogljlgcm
+  '@testing-library/user-event': 14.2.0_tlwynutqiyp5mns3woioasuxnq
   '@types/react': 18.0.9
   '@types/react-dom': 18.0.3
   '@typescript-eslint/eslint-plugin': 5.23.0_c63nfttrfhylg3zmgcxfslaw44
@@ -787,6 +791,15 @@ packages:
       '@types/react-dom': 18.0.3
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
+    dev: true
+
+  /@testing-library/user-event/14.2.0_tlwynutqiyp5mns3woioasuxnq:
+    resolution: {integrity: sha512-+hIlG4nJS6ivZrKnOP7OGsDu9Fxmryj9vCl8x0ZINtTJcCHs2zLsYif5GzuRiBF2ck5GZG2aQr7Msg+EHlnYVQ==}
+    engines: {node: '>=12', npm: '>=6'}
+    peerDependencies:
+      '@testing-library/dom': '>=7.21.4'
+    dependencies:
+      '@testing-library/dom': 8.13.0
     dev: true
 
   /@tsconfig/node10/1.0.8:
