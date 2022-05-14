@@ -7,7 +7,8 @@
     "dev": "vite",
     "preinstall": "npx only-allow pnpm",
     "prepare": "is-ci || husky install",
-    "preview": "serve dist"
+    "preview": "serve dist",
+    "test": "vitest"
   },
   "commitlint": {
     "extends": [
@@ -27,6 +28,7 @@
     "@0x219/commitlint-config": "1.0.2",
     "@commitlint/cli": "16.2.4",
     "@iconify-json/carbon": "^1.1.4",
+    "@testing-library/react": "^13.2.0",
     "@types/react": "18.0.9",
     "@types/react-dom": "18.0.3",
     "@typescript-eslint/eslint-plugin": "5.23.0",
@@ -41,6 +43,7 @@
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.4",
+    "happy-dom": "^3.2.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "lint-staged": "12.4.1",
@@ -52,6 +55,7 @@
     "unocss": "^0.33.4",
     "vite": "2.9.9",
     "vite-plugin-mkcert": "1.6.0",
-    "vite-tsconfig-paths": "3.4.1"
+    "vite-tsconfig-paths": "3.4.1",
+    "vitest": "^0.12.6"
   }
 }

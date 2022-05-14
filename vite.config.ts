@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+/// <reference types="vitest" />
 import type { UserConfigFn, UserConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import legacy from "@vitejs/plugin-legacy";
@@ -12,9 +14,15 @@ import UnocssIcons from "@unocss/preset-icons";
 
 const defineConfig: UserConfigFn = ({ command, mode }) => {
   const config: UserConfig = {
-    root: "pages",
+    // root: "pages",
     server: {
       https: true,
+    },
+    test: {
+      environment: "happy-dom",
+      // environment: "jsdom",
+      // globals: true,
+      includeSource: ["components/**/*.{ts,tsx}"],
     },
     plugins: [
       Unocss({
@@ -34,7 +42,7 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
       }),
       react(),
       tsconfigPaths(),
-      // legacy(),
+      legacy(),
       mkcert({
         source: "coding",
       }),
