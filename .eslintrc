@@ -19,7 +19,7 @@
 
     "perf-standard",
 
-    "plugin:boundaries/recommended",
+    "plugin:boundaries/strict",
 
     "plugin:ramda/recommended",
     "plugin:promise/recommended",
