@@ -25,13 +25,13 @@
       "@styles/*": ["./styles/*"],
       "@helpers": ["./helpers"],
       "@atoms": ["./components/atoms"],
-      "@molecules": ["./components/molecules"],
-      "@organisms": ["./components/organisms"],
-      "@layouts": ["./components/layouts"],
+      "@molecules": ["components/molecules"],
+      "@organisms": ["components/organisms"],
+      "@layouts": ["components/layouts"],
       "@hooks": ["./hooks"],
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "components/atoms/index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

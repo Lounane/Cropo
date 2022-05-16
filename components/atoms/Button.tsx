@@ -1,6 +1,11 @@
-import { render, screen, userEvent } from "@utils/test_utils";
+import { render, screen } from "@utils/testUtils";
+
 export default function Button() {
-  return <button>hello world</button>;
+  return (
+    <button type="button" m-10>
+      hello world
+    </button>
+  );
 }
 
 /* eslint-disable */

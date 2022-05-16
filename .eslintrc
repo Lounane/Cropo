@@ -8,17 +8,183 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+
+    "airbnb",
+    "airbnb-typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:switch-case/recommended",
+
+    "perf-standard",
+
+    "plugin:boundaries/recommended",
+
+    "plugin:ramda/recommended",
+    "plugin:promise/recommended",
+    "plugin:functional/external-recommended",
+    "plugin:functional/all",
+
+    //Security
+    "plugin:pii/recommended",
+    "plugin:jsonc/base",
+    "plugin:no-unsanitized/DOM",
+    "plugin:security/recommended",
+
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "filename-consistency",
+    "simple-import-sort",
+    "testing-library",
+    "switch-case",
+    "promise",
+    "ramda",
+    "functional",
+    "boundaries",
+    "no-secrets",
+    "pii",
+    "xss",
+    "only-error",
+    "prettier"
+  ],
   "env": {
     "browser": true,
     "node": true
   },
+
   "settings": {
     "react": {
       "version": "18.0.0"
+    },
+    "boundaries/elements": [
+      {
+        "type": "atoms",
+        "pattern": "atoms"
+      },
+      {
+        "type": "molecules",
+        "pattern": "molecules"
+      },
+      {
+        "type": "organisms",
+        "pattern": "organisms"
+      },
+      {
+        "type": "helpers",
+        "pattern": "helpers"
+      },
+      {
+        "type": "hooks",
+        "pattern": "hooks"
+      },
+      {
+        "type": "pages",
+        "pattern": "pages"
+      },
+      {
+        "type": "services",
+        "pattern": "services"
+      },
+      {
+        "type": "types",
+        "pattern": "types"
+      },
+      {
+        "type": "utils",
+        "pattern": "utils"
+      }
+    ],
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
     }
+  },
+  "rules": {
+    "filename-consistency/match": ["error", ["camel", "pascal"]],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": ["snake_case"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["UPPER_CASE"]
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["camelCase"],
+        "prefix": ["is", "should", "has", "can", "did", "will"]
+      },
+      {
+        "selector": ["function"],
+        "format": ["PascalCase"]
+      }
+    ],
+    "boundaries/element-types": [
+      2,
+      {
+        "default": "disallow",
+        "rules": [
+          {
+            "from": "atoms",
+            "allow": ["utils"]
+          },
+          {
+            "from": "molecules",
+            "allow": ["atoms", "utils"]
+          },
+          {
+            "from": "organisms",
+            "allow": ["molecules", "atoms", "helpers", "hooks", "utils"]
+          },
+          {
+            "from": "pages",
+            "allow": ["organisms", "services", "utils"]
+          }
+        ]
+      }
+    ],
+    "boundaries/external": [
+      2,
+      {
+        // disallow all external imports by default
+        "default": "disallow"
+        // "rules": [
+        //   {
+        //     // from helper elements
+        //     "from": ["utils"],
+        //     // allow importing moment
+        //     "allow": ["*"]
+        //   }
+        // ]
+      }
+    ],
+    // "boundaries/entry-point": [
+    //   2,
+    //   {
+    //     // disallow all entry-points by default
+    //     "default": "disallow",
+    //     "rules": [
+    //       {
+    //         // when importing components or modules
+    //         "target": ["atoms", "modules"],
+    //         // only allow index.js
+    //         "allow": "index.ts"
+    //       }
+    //     ]
+    //   }
+    // ],
+
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-empty-label": 0,
+    "react/react-in-jsx-scope": 0
   }
 }

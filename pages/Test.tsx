@@ -1,9 +1,5 @@
-import Button from "components/atoms/Button";
+import { Button } from "@atoms";
 
 export default function Test() {
-  return (
-    <>
-      <Button />
-    </>
-  );
+  return <Button />;
 }
