@@ -1,16 +1,15 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { StrictMode, createRoot } from "@utils/react";
+import GlobalStyles from "@styles/GlobalStyles";
 import App from "./App";
-import "uno.css";
-import Test from "./Test";
 
 const container = document.getElementById("root") as HTMLElement;
 
 const root = createRoot(container);
 
+// eslint-disable-next-line functional/no-expression-statement
 root.render(
   <StrictMode>
+    <GlobalStyles />
     <App />
-    <Test />
   </StrictMode>
 );

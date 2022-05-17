@@ -1,18 +1,16 @@
-import { render, screen } from "@utils/testUtils";
+import { render, screen } from "@utils/test";
 
-export default function Button() {
-  return (
-    <button type="button" m-10>
-      hello world
-    </button>
-  );
+type BUTTON = { readonly children: string };
+
+function Button({ children }: BUTTON) {
+  return <button>{children}</button>;
 }
 
 /* eslint-disable */
 if (import.meta.vitest) {
   describe("test", () => {
     it("should work", () => {
-      render(<Button />);
+      render(<Button>Hello</Button>);
       const element = screen.getByText(/Hello World/i);
       //   element.click();
       expect(element).toBeTruthy();

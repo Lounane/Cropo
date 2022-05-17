@@ -38,7 +38,7 @@
   "plugins": [
     "@typescript-eslint",
     "react",
-    "filename-consistency",
+    // "filename-consistency",
     "simple-import-sort",
     "testing-library",
     "switch-case",
@@ -97,6 +97,10 @@
       {
         "type": "utils",
         "pattern": "utils"
+      },
+      {
+        "type": "styles",
+        "pattern": "styles"
       }
     ],
     "import/resolver": {
@@ -106,7 +110,7 @@
     }
   },
   "rules": {
-    "filename-consistency/match": ["error", ["camel", "pascal"]],
+    // "filename-consistency/match": ["error", ["camel", "pascal"]],
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -120,12 +124,17 @@
       {
         "selector": "variable",
         "types": ["boolean"],
-        "format": ["camelCase"],
+        "format": ["snake_case"],
         "prefix": ["is", "should", "has", "can", "did", "will"]
       },
       {
+        "selector": "variable",
+        "types": ["function"],
+        "format": ["StrictPascalCase"]
+      },
+      {
         "selector": ["function"],
-        "format": ["PascalCase"]
+        "format": ["StrictPascalCase"]
       }
     ],
     "boundaries/element-types": [
@@ -147,7 +156,11 @@
           },
           {
             "from": "pages",
-            "allow": ["organisms", "services", "utils"]
+            "allow": ["organisms", "services", "styles", "utils"]
+          },
+          {
+            "from": "styles",
+            "allow": ["utils"]
           }
         ]
       }
@@ -156,15 +169,15 @@
       2,
       {
         // disallow all external imports by default
-        "default": "disallow"
-        // "rules": [
-        //   {
-        //     // from helper elements
-        //     "from": ["utils"],
-        //     // allow importing moment
-        //     "allow": ["*"]
-        //   }
-        // ]
+        "default": "disallow",
+        "rules": [
+          {
+            // from helper elements
+            "from": ["utils"],
+            // allow importing moment
+            "allow": ["*"]
+          }
+        ]
       }
     ],
     // "boundaries/entry-point": [
@@ -185,6 +198,7 @@
 
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "no-empty-label": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "camelcase": 0
   }
 }

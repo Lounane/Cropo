@@ -17,6 +17,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "sourceMap": true,
+    "jsxImportSource": "@emotion/react",
+
     "types": ["vite/client", "vitest/importMeta", "vitest/globals"],
 
     "paths": {
@@ -32,6 +34,6 @@
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "components/atoms/index.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "types"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

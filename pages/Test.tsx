@@ -1,5 +1,17 @@
-import { Button } from "@atoms";
+// import { Button } from "@atoms";
 
-export default function Test() {
-  return <Button />;
-}
+import { tw } from "@utils/twin";
+
+// export default function Test() {
+//   return <Button />;
+// }
+
+type Pull = string;
+const tton = tw.button``;
+
+const srtring = "syyy";
+const boool = true;
+
+function heypapa() {}
+
+console.log(srtring);
