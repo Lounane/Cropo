@@ -172,9 +172,11 @@
         "default": "disallow",
         "rules": [
           {
-            // from helper elements
+            "from": ["atoms"],
+            "allow": ["twin.macro"]
+          },
+          {
             "from": ["utils"],
-            // allow importing moment
             "allow": ["*"]
           }
         ]

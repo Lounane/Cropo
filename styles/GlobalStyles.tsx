@@ -1,20 +1,15 @@
-import {
-  tw,
-  css,
-  theme,
-  Global,
-  GlobalStyles as BaseStyles,
-} from "@utils/twin";
+/* eslint-disable */
+import React from "react";
+import { Global } from "@emotion/react";
+import tw, { css, theme, GlobalStyles as BaseStyles } from "twin.macro";
 
 const custom_styles = css({
   body: {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     WebkitTapHighlightColor: theme`colors.purple.500`,
     ...tw`antialiased`,
   },
 });
 
-// eslint-disable-next-line functional/functional-parameters
 function GlobalStyles() {
   return (
     <>

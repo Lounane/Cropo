@@ -1,6 +1,7 @@
-export default function App() {
-  return <div m-50>hello world</div>;
-}
+import tw, { styled } from "twin.macro";
+
+const Button = tw.button``;
+
 /* eslint-disable */
 // if (import.meta.vitest) {
 //   const { describe, it, expect } = import.meta.vitest;
