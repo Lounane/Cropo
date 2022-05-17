@@ -1,17 +1,18 @@
 import { render, screen } from "@utils/test";
+import tw from "twin.macro";
 
-type BUTTON = { readonly children: string };
-
-function Button({ children }: BUTTON) {
-  return <button>{children}</button>;
-}
+const Button = tw.button``;
+// function Button({ children }: BUTTON) {
+//   return <button>{children}</button>;
+// }
 
 /* eslint-disable */
 if (import.meta.vitest) {
   describe("test", () => {
     it("should work", () => {
-      render(<Button>Hello</Button>);
-      const element = screen.getByText(/Hello World/i);
+      const label = "hel";
+      render(<Button>{label}</Button>);
+      const element = screen.getByText(label);
       //   element.click();
       expect(element).toBeTruthy();
       expect(element).toBeDefined();

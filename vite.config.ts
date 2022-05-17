@@ -25,21 +25,21 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
       includeSource: ["components/**/*.{ts,tsx}"],
     },
     plugins: [
-      Unocss({
-        /* options */
-        presets: [
-          presetUno(),
-          presetAttributify(),
+      // Unocss({
+      //   /* options */
+      //   presets: [
+      //     presetUno(),
+      //     presetAttributify(),
 
-          UnocssIcons({
-            // options
-            prefix: "i-",
-            extraProperties: {
-              display: "inline-block",
-            },
-          }),
-        ],
-      }),
+      //     UnocssIcons({
+      //       // options
+      //       prefix: "i-",
+      //       extraProperties: {
+      //         display: "inline-block",
+      //       },
+      //     }),
+      //   ],
+      // }),
       react({
         babel: {
           plugins: [
