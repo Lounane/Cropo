@@ -2,7 +2,9 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "extraFileExtensions:": [".mdx"],
+    "extensions:": [".mdx"]
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -10,11 +12,9 @@
     "plugin:react/jsx-runtime",
 
     "airbnb",
-    "airbnb-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:switch-case/recommended",
 
     "perf-standard",
@@ -202,5 +202,66 @@
     "no-empty-label": 0,
     "react/react-in-jsx-scope": 0,
     "camelcase": 0
-  }
+  },
+
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.test.tsx"],
+
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+
+        "airbnb",
+        "airbnb-typescript",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:switch-case/recommended",
+
+        "perf-standard",
+
+        "plugin:boundaries/strict",
+
+        "plugin:ramda/recommended",
+        "plugin:promise/recommended",
+        "plugin:functional/external-recommended",
+        "plugin:functional/all",
+
+        //Security
+        "plugin:pii/recommended",
+        "plugin:jsonc/base",
+        "plugin:no-unsanitized/DOM",
+        "plugin:security/recommended",
+
+        "plugin:prettier/recommended",
+        "prettier"
+      ]
+    },
+    {
+      "files": ["*.test.tsx"],
+      "rules": {
+        "functional/functional-parameters": 0,
+        "functional/no-expression-statement": 0,
+        "functional/no-return-void": 0
+      }
+    },
+    {
+      "files": ["*.mdx"],
+      "extends": ["plugin:mdx/recommended"],
+      "rules": {
+        "@typescript-eslint/naming-convention": 0,
+        "@typescript-eslint/await-thenable": 0
+      },
+      // optional, if you want to lint code blocks at the same time
+      "settings": {
+        "mdx/code-blocks": true,
+        // optional, if you want to disable language mapper, set it to `false`
+        // if you want to override the default language mapper inside, you can provide your own
+        "mdx/language-mapper": {}
+      }
+    }
+  ]
 }

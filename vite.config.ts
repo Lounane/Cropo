@@ -21,7 +21,7 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
     test: {
       environment: "happy-dom",
       // environment: "jsdom",
-      globals: true,
+      // globals: true,
       includeSource: ["components/**/*.{ts,tsx}"],
     },
     plugins: [
@@ -41,24 +41,24 @@ const defineConfig: UserConfigFn = ({ command, mode }) => {
       //   ],
       // }),
       react({
-        babel: {
-          plugins: [
-            "babel-plugin-macros",
-            [
-              "@emotion/babel-plugin-jsx-pragmatic",
-              {
-                export: "jsx",
-                import: "__cssprop",
-                module: "@emotion/react",
-              },
-            ],
-            [
-              "@babel/plugin-transform-react-jsx",
-              { pragma: "__cssprop" },
-              "twin.macro",
-            ],
-          ],
-        },
+        // babel: {
+        //   plugins: [
+        //     "babel-plugin-macros",
+        //     [
+        //       "@emotion/babel-plugin-jsx-pragmatic",
+        //       {
+        //         export: "jsx",
+        //         import: "__cssprop",
+        //         module: "@emotion/react",
+        //       },
+        //     ],
+        //     [
+        //       "@babel/plugin-transform-react-jsx",
+        //       { pragma: "__cssprop" },
+        //       "twin.macro",
+        //     ],
+        //   ],
+        // },
       }),
       tsconfigPaths(),
       legacy(),

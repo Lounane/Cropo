@@ -19,7 +19,8 @@
     "sourceMap": true,
     "jsxImportSource": "@emotion/react",
 
-    "types": ["vite/client", "vitest/importMeta", "vitest/globals"],
+    "types": ["vite/client"],
+    // "types": ["vite/client", "vitest/importMeta", "vitest/globals"],
 
     "paths": {
       "@imgs/*": ["./assets/images/*"],
@@ -34,6 +35,6 @@
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "types"],
+  "include": ["**/*.ts", "**/*.tsx", "types", "**/*.mdx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

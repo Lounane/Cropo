@@ -12,6 +12,13 @@
       "webRoot": "${workspaceFolder}"
     },
     {
+      "name": "Launch storybook",
+      "request": "launch",
+      "type": "pwa-msedge",
+      "url": "http://localhost:6007",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
       "type": "pwa-chrome",
       "request": "launch",
       "name": "Launch Chrome",

@@ -41,7 +41,8 @@
     "mdickin.markdown-shortcuts",
     "DavidAnson.vscode-markdownlint",
     "antfu.unocss",
-    "antfu.vite"
+    "antfu.vite",
+    "silvenon.mdx"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
