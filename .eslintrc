@@ -17,8 +17,6 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:switch-case/recommended",
 
-    "perf-standard",
-
     "plugin:boundaries/strict",
 
     "plugin:ramda/recommended",
@@ -220,8 +218,6 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:switch-case/recommended",
-
-        "perf-standard",
 
         "plugin:boundaries/strict",
 
