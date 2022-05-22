@@ -34,6 +34,6 @@ RUN echo "starship init fish | source" >> ~/.config/fish/config.fish
 RUN echo "set fish_greeting" >> ~/.config/fish/config.fish
 USER node
 # Npm Check Updates
-RUN npm install -g pnpm npm-check-updates snyk
+RUN npm install -g pnpm npm-check-updates snyk  @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog cz-emoji
 
 
