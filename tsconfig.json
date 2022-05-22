@@ -17,6 +17,9 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react"
   },
-  "include": ["src", "types"],
+  // "include": ["src", "types"],
+
+  "include": ["**/*.ts", "**/*.tsx", "types", "**/*.mdx"],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -2,7 +2,7 @@ const macrosPlugin = require("vite-plugin-babel-macros");
 const windiCss = require("vite-plugin-windicss");
 
 module.exports = {
-  stories: [ "../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)" ],
+  stories: [ "../**/*.stories.mdx", "../**/*.stories.@(js|jsx|ts|tsx)" ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
