@@ -234,7 +234,13 @@
 
         "plugin:prettier/recommended",
         "prettier"
-      ]
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ]
+      }
     },
     {
       "files": ["*.test.tsx"],

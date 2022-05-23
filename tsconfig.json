@@ -14,8 +14,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "sourceMap": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "types": ["vite/client"],
+    // "types": ["vite/client", "vitest/importMeta", "vitest/globals"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@imgs/*": ["assets/images/*"],
+      "@icons": ["assets/icons"],
+      "@styles/*": ["styles/*"],
+      "@helpers": ["helpers"],
+      "@atoms": ["components/atoms"],
+      "@molecules": ["components/molecules"],
+      "@organisms": ["components/organisms"],
+      "@layouts": ["components/layouts"],
+      "@hooks": ["hooks"],
+      "@utils/*": ["utils/*"]
+    }
   },
   // "include": ["src", "types"],
 
