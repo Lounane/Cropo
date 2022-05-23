@@ -12,9 +12,11 @@
     "plugin:react/jsx-runtime",
 
     "airbnb",
+    "airbnb-typescript",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:switch-case/recommended",
 
     "plugin:boundaries/strict",
@@ -203,45 +205,45 @@
   },
 
   "overrides": [
-    {
-      "files": ["*.tsx", "*.test.tsx"],
+    // {
+    //   "files": ["*.tsx", "*.test.tsx"],
 
-      "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
+    //   "extends": [
+    //     "plugin:@typescript-eslint/recommended",
+    //     "plugin:react/recommended",
+    //     "plugin:react/jsx-runtime",
 
-        "airbnb",
-        "airbnb-typescript",
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:switch-case/recommended",
+    //     "airbnb",
+    //     "airbnb-typescript",
+    //     "eslint:recommended",
+    //     "plugin:@typescript-eslint/eslint-recommended",
+    //     "plugin:@typescript-eslint/recommended",
+    //     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    //     "plugin:switch-case/recommended",
 
-        "plugin:boundaries/strict",
+    //     "plugin:boundaries/strict",
 
-        "plugin:ramda/recommended",
-        "plugin:promise/recommended",
-        "plugin:functional/external-recommended",
-        "plugin:functional/all",
+    //     "plugin:ramda/recommended",
+    //     "plugin:promise/recommended",
+    //     "plugin:functional/external-recommended",
+    //     "plugin:functional/all",
 
-        //Security
-        "plugin:pii/recommended",
-        "plugin:jsonc/base",
-        "plugin:no-unsanitized/DOM",
-        "plugin:security/recommended",
+    //     //Security
+    //     "plugin:pii/recommended",
+    //     "plugin:jsonc/base",
+    //     "plugin:no-unsanitized/DOM",
+    //     "plugin:security/recommended",
 
-        "plugin:prettier/recommended",
-        "prettier"
-      ],
-      "rules": {
-        "import/no-extraneous-dependencies": [
-          "error",
-          { "devDependencies": true }
-        ]
-      }
-    },
+    //     "plugin:prettier/recommended",
+    //     "prettier"
+    //   ],
+    //   "rules": {
+    //     "import/no-extraneous-dependencies": [
+    //       "error",
+    //       { "devDependencies": true }
+    //     ]
+    //   }
+    // },
     {
       "files": ["*.test.tsx"],
       "rules": {
@@ -249,21 +251,21 @@
         "functional/no-expression-statement": 0,
         "functional/no-return-void": 0
       }
-    },
-    {
-      "files": ["*.mdx"],
-      "extends": ["plugin:mdx/recommended"],
-      "rules": {
-        "@typescript-eslint/naming-convention": 0,
-        "@typescript-eslint/await-thenable": 0
-      },
-      // optional, if you want to lint code blocks at the same time
-      "settings": {
-        "mdx/code-blocks": true,
-        // optional, if you want to disable language mapper, set it to `false`
-        // if you want to override the default language mapper inside, you can provide your own
-        "mdx/language-mapper": {}
-      }
     }
+    // {
+    //   "files": ["*.mdx"],
+    //   "extends": ["plugin:mdx/recommended"],
+    //   "rules": {
+    //     "@typescript-eslint/naming-convention": 0,
+    //     "@typescript-eslint/await-thenable": 0
+    //   },
+    //   // optional, if you want to lint code blocks at the same time
+    //   "settings": {
+    //     "mdx/code-blocks": true,
+    //     // optional, if you want to disable language mapper, set it to `false`
+    //     // if you want to override the default language mapper inside, you can provide your own
+    //     "mdx/language-mapper": {}
+    //   }
+    // }
   ]
 }
