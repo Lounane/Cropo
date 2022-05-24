@@ -1,0 +1,10 @@
+import { describe, it, render, screen, expect } from "@utils/test";
+import { Primary, Secondary } from "../Button";
+
+describe("Primary", () => {
+  it("should render Primary Button", () => {
+    const text = "primary Button";
+    render(<Primary>{text}</Primary>);
+    expect(screen.getByText(text)).toBeDefined();
+  });
+});

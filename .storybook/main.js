@@ -2,7 +2,9 @@ const macrosPlugin = require("vite-plugin-babel-macros");
 const windiCss = require("vite-plugin-windicss");
 
 module.exports = {
-  stories: [ "../**/*.stories.mdx", "../**/*.stories.@(js|jsx|ts|tsx)" ],
+  stories: [ "../components/**/*.stories.mdx",
+    "../components/**/*.stories.@(js|jsx|ts|tsx)"
+  ],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -14,7 +16,8 @@ module.exports = {
     builder: "@storybook/builder-vite",
   },
   features: {
-    storyStoreV7: true,
+    storyStoreV7: true, interactionsDebugger: true, // 👈 enable playback controls
+
   },
   async viteFinal(config, { configType }) {
     // customize the Vite config here

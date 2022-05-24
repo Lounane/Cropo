@@ -37,7 +37,13 @@
   },
   // "include": ["src", "types"],
 
-  "include": ["**/*.ts", "**/*.tsx", "types", "**/*.mdx"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "types",
+    "**/*.mdx",
+    "components/atoms/Button/index.tsx"
+  ],
 
   "references": [{ "path": "./tsconfig.node.json" }]
 }
