@@ -42,7 +42,7 @@
     "**/*.tsx",
     "types",
     "**/*.mdx",
-    "components/atoms/Button/index.tsx"
+    "components/atoms/Link/index.tsx"
   ],
 
   "references": [{ "path": "./tsconfig.node.json" }]

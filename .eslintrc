@@ -2,9 +2,7 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "extraFileExtensions:": [".mdx"],
-    "extensions:": [".mdx"]
+    "project": "./tsconfig.json"
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
@@ -130,11 +128,15 @@
       {
         "selector": "variable",
         "types": ["function"],
+        "format": ["StrictPascalCase", "snake_case"]
+      },
+      {
+        "selector": ["function", "parameter"],
         "format": ["StrictPascalCase"]
       },
       {
-        "selector": ["function"],
-        "format": ["StrictPascalCase"]
+        "selector": ["memberLike"],
+        "format": ["StrictPascalCase", "snake_case"]
       }
     ],
     "boundaries/element-types": [
@@ -198,6 +200,8 @@
     //   }
     // ],
 
+    "react/jsx-props-no-spreading": 0,
+    "import/prefer-default-export": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "no-empty-label": 0,
     "react/react-in-jsx-scope": 0,
