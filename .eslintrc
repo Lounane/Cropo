@@ -24,6 +24,8 @@
     "plugin:functional/external-recommended",
     "plugin:functional/all",
 
+    "plugin:storybook/recommended",
+
     //Security
     "plugin:pii/recommended",
     "plugin:jsonc/base",
@@ -127,7 +129,7 @@
       },
       {
         "selector": "variable",
-        "types": ["function"],
+        // "types": ["function", "array", "object"],
         "format": ["StrictPascalCase", "snake_case"]
       },
       {

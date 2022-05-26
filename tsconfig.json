@@ -42,7 +42,8 @@
     "**/*.tsx",
     "types",
     "**/*.mdx",
-    "components/atoms/Link/index.tsx"
+    "components/atoms/Link/index.tsx",
+    "tailwind.config.js"
   ],
 
   "references": [{ "path": "./tsconfig.node.json" }]

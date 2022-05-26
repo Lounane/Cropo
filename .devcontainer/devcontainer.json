@@ -43,7 +43,8 @@
     "antfu.unocss",
     "antfu.vite",
     "silvenon.mdx",
-    "KnisterPeter.vscode-commitizen"
+    "KnisterPeter.vscode-commitizen",
+    "mikestead.dotenv"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
