@@ -8,8 +8,8 @@ const Link = styled.a(({ Primary }: LINK) => [
   tw`box-border px-5 py-2 cursor-pointer outline-none transition duration-300  `,
   Primary
     ? // ? tw`rounded-xl  bg-purple-600  hover:bg-purple-800`
-      tw`rounded-xl bg-gradient-to-tr   from-indigo-600 via-purple-600  to-pink-600 dark:text-white`
-    : tw`ease-out hover:text-purple-500 dark:text-red-700`,
+      tw`rounded-xl bg-gradient-to-tr   from-indigo-600 via-purple-600  to-pink-600 text-white`
+    : tw`ease-out hover:text-purple-500 `,
 ]);
 
 export { Link };

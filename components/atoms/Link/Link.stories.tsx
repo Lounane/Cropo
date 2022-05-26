@@ -7,5 +7,10 @@ export default {
   component: Link,
 };
 
-export const Primary = { args: { Primary: true, children: "Button" } };
+export const Primary = {
+  args: { Primary: true, children: "Button" },
+};
+
 export const Secondary = { args: { children: "Button" } };
+
+export const Test = { args: { children: <span>component</span> } };

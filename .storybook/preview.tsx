@@ -27,18 +27,17 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { addons } from "@storybook/addons";
 
 const Base = styled.div({
-  position: "absolute",
+  // position: "absolute",
   top: 0,
   left: 0,
   right: 0,
 
-  height: "100vh",
+  // height: "100vh",
   bottom: 0,
   overflow: "auto",
   padding: 10,
-  display: "grid",
-  placeItems: "center",
-  dark: true,
+  // display: "grid",
+  // placeItems: "center",
 });
 
 const ThemeBlock = styled.div(
@@ -46,12 +45,11 @@ const ThemeBlock = styled.div(
     position: "absolute",
     top: 0,
     left: 0,
-    right: "50vw",
-    width: "50vw",
-    height: "100vh",
+    right: "50%",
+    width: "50%",
+    // height: "100vh",
     bottom: 0,
     overflow: "auto",
-    padding: 10,
     display: "grid",
     placeItems: "center",
   },
@@ -63,11 +61,11 @@ const ThemeBlock = styled.div(
     side === "left"
       ? {
           left: 0,
-          right: "50vw",
+          right: "50%",
         }
       : {
           right: 0,
-          left: "50vw",
+          left: "50%",
         }
 );
 
@@ -105,6 +103,7 @@ export const decorators = [
       parameters.theme ||
       (isChromatic() ? "stacked" : "light");
 
+    console.log(themes);
     switch (theme) {
       case "side-by-side": {
         return (
@@ -185,6 +184,7 @@ const customViewports = {
   },
 };
 const dualScreenViewPorts = map(double_viewport_width, INITIAL_VIEWPORTS);
+
 export const parameters = {
   viewport: {
     viewports: {
@@ -195,7 +195,14 @@ export const parameters = {
   darkMode: {
     darkClass: "dark",
   },
+
+  // themes: {
+  // green: { appBg: "red" },
+  // },
+
+  // bac
 };
+
 type VIEW_PORT_VAL = {
   name: string;
   type: string;
