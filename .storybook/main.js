@@ -1,5 +1,6 @@
-const macrosPlugin = require( "vite-plugin-babel-macros" );
-const windiCss = require( "vite-plugin-windicss" );
+const macrosPlugin = require("vite-plugin-babel-macros");
+const windiCss = require("vite-plugin-windicss");
+
 
 module.exports = {
   stories: [
@@ -25,9 +26,9 @@ module.exports = {
     interactionsDebugger: true, // 👈 enable playback controls
     // previewCsfV3: true,
   },
-  async viteFinal ( config, { configType } ) {
+  async viteFinal(config, { configType }) {
     // customize the Vite config here
-    ( config.plugins = [
+    (config.plugins = [
       ...config.plugins,
       macrosPlugin.default(),
       windiCss.default(),
@@ -37,7 +38,7 @@ module.exports = {
       //     icon: true,
       //   },
       // })
-    ] );
+    ]);
 
     // return the customized config
     return config;
