@@ -26,6 +26,7 @@ import { Symbols } from "@storybook/components";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { addons } from "@storybook/addons";
 
+
 const Base = styled.div({
   // position: "absolute",
   top: 0,
@@ -60,13 +61,13 @@ const ThemeBlock = styled.div(
   ({ side }) =>
     side === "left"
       ? {
-          left: 0,
-          right: "50%",
-        }
+        left: 0,
+        right: "50%",
+      }
       : {
-          right: 0,
-          left: "50%",
-        }
+        right: 0,
+        left: "50%",
+      }
 );
 
 const ThemeStack = styled.div(

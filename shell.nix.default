@@ -1,0 +1,22 @@
+with (import <nixpkgs> { });
+mkShell {
+  buildInputs = [
+    hello
+    # nodejs-18_x
+    # yarn
+    # commitlint
+    # commitizen
+    # cz-conventional-changelog
+    # cz-emoji
+
+  ];
+  shellHook = ''
+    echo "welcom to nix shell"
+    mkdir -p ../.nix-node
+    export NODE_PATH=$PWD/../.nix-node
+    export NPM_CONFIG_PREFIX=$PWD/../.nix-node
+    export PATH=$NODE_PATH/bin:$PATH
+    npm install -g pnpm npm-check-updates @commitlint/cli @commitlint/config-conventional commitizen cz-conventional-changelog cz-emoji
+  '';
+}
+
